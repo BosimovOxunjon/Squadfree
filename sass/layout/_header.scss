@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: $mainblue;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+  a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: $mainwhite;
+  }
+  .header__logo {
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      .header__brand {
+        text-transform: uppercase;
+        color: $mainwhite;
+      }
+    }
+  }
+  nav {
+    .header__list {
+      display: none;
+      list-style: none;
+      margin-left: 50px;
+      @include respond(lg) {
+        display: flex;
+      }
+      .header__list-item {
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-family: sans-serif;
+          margin-left: 10px;
+          padding: 10px;
+          font-weight: 700;
+          transition: 0.3s;
+        }
+      }
+    }
+    .header__btn {
+      background: #213b52;
+      color: $mainwhite;
+      @include respond(lg) {
+        display: inline-block;
+      }
+    }
+    .header__list-item:hover {
+      a {
+        background: rgba(255, 255, 255, 0.2);
+        color: blue;
+      }
+    }
+    input[type="checkbox"] {
+      display: none;
+    }
+    label[for="checkbox"] {
+      cursor: pointer;
+      @include respond(lg) {
+        display: none;
+      }
+      .header__menu-item {
+        display: block;
+        width: 20px;
+        height: 2px;
+        margin-bottom: 5px;
+        background: $mainwhite;
+        transition: 0.01s;
+        transform-origin: 0;
+      }
+    }
+    input[type="checkbox"]:checked + label {
+      .header__menu-item:first-of-type {
+        transform: rotate(405deg);
+      }
+      .header__menu-item:nth-of-type(2) {
+        visibility: hidden;
+        opacity: 0;
+      }
+      .header__menu-item:last-of-type {
+        transform: rotate(-405deg);
+      }
+    }
+    input[type="checkbox"]:checked + label ~ .header__list {
+      position: fixed;
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      top: 50px;
+      margin: auto 0;
+      padding-top: 25px;
+      width: 93%;
+      right: 15px;
+      left: 15px;
+      height: 90vh;
+      background-color: $mainwhite;
+      box-shadow: 1px 1px 15px #050505, 1px 1px 15px #000000;
+      a {
+        color: #2f4d5a;
+      }
+      a:hover {
+        color: #67b0d1;
+      }
+      .header__btn {
+        color: $mainwhite;
+        border: $mainblue;
+      }
+    }
+  }
+}

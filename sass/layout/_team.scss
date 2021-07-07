@@ -1,0 +1,63 @@
+.team {
+  .row {
+    align-items: stretch;
+    .team__box {
+      text-align: center;
+      padding: 0 10px;
+      margin-bottom: 30px;
+      min-height: 300px;
+      max-height: 700px;
+      .team__card-img {
+        height: 100%;
+        img {
+          object-fit: cover;
+        }
+      }
+      .team__info {
+        position: relative;
+        background: $mainwhite;
+        // padding: 5px;
+        width: 85%;
+        overflow: hidden;
+        max-height: 90px;
+        margin: auto;
+        margin-top: -45px;
+        margin-bottom: 60px;
+        z-index: 11;
+        box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+        transition: max-height .56s ease-in-out;
+      }
+      h4 {
+        position: relative;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #2f4d5a;
+        padding-bottom: 10px;
+      }
+      h4::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 1px;
+        background: #b1cbd7;
+        bottom: 0;
+        left: calc(50% - 25px);
+      }
+      p {
+        font-style: italic;
+        font-size: 13px;
+      }
+      .team__card-text {
+        font-style: italic;
+      }
+    }
+    .team__box:hover {
+      .team__info {
+        max-height: 300px;
+      }
+    }
+  }
+}

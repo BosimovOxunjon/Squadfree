@@ -1,0 +1,40 @@
+.testimonials {
+  .slider {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .testimonial__item {
+    width: 350px;
+    text-align: center;
+    background: $mainwhite;
+
+    p {
+      padding: 25px 10px;
+      box-shadow: 0px 2px 15px rgb(0 0 0 / 10%);
+      line-height: 1.5;
+      border-radius: 4px;
+    }
+
+    .testimonial__img {
+      width: 90px;
+      height: 90px;
+      border: 0;
+      border-radius: 50%;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0 5px 0;
+      color: #111;
+    }
+
+    h4 {
+      font-size: 14px;
+      color: #999;
+      margin: 0;
+      font-weight: 500;
+    }
+  }
+}

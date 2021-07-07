@@ -1,0 +1,57 @@
+.services {
+  text-align: left;
+  .row {
+    align-items: stretch;
+    .service__box-wrapper {
+      display: flex;
+      .service__box {
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        min-height: 100px;
+        background: #fff;
+        box-shadow: 0 0 29px 0 rgb(68 88 144 / 12%);
+        transition: all 0.3s ease-in-out;
+        border-radius: 8px;
+        z-index: 1;
+        .service__box::before {
+          content: "";
+          position: absolute;
+          background: white;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          top: 100%;
+          transition: all 0.3s;
+          z-index: -1;
+        }
+        .service__icon {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+        }
+        .service__title {
+          font-weight: 700;
+          margin-bottom: 15px;
+          font-size: 18px;
+          .service__link {
+            text-decoration: none;
+            color: $mainblack;
+          }
+        }
+        .service__text {
+          line-height: 1.8;
+        }
+      }
+      .service__box:hover {
+        background: #67b0d1;
+        top: 0;
+        border-radius: 0px;
+        color: $mainwhite;
+        .service__link {
+          color: $mainwhite;
+        }
+      }
+    }
+  }
+}

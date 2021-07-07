@@ -1,0 +1,115 @@
+.footer {
+  position: relative;
+  min-height: 400px;
+  padding: 30px 0;
+  background: #263f49;
+
+  .row {
+    .footer__info {
+      font-size: 15px;
+      padding: 30px 20px;
+      margin-top: -90px;
+      background: white;
+      // box-shadow: 1px 1px 5px;
+      text-align: center;
+      border-top: 4px solid $mainblue;
+      min-height: 350px;
+      width: 93%;
+
+      h3 {
+        font-size: 24px;
+      }
+
+      .footer__info-text {
+        font-style: italic;
+      }
+
+      .footer__info-text+p {
+        line-height: 24px;
+      }
+    }
+
+    .footer__title {
+      font-weight: 600;
+      color: $mainwhite;
+      text-transform: capitalize;
+    }
+
+    .footer__links {
+      color: $mainwhite;
+      text-transform: capitalize;
+
+      .footer__list {
+        padding: 0;
+        list-style: none;
+
+        .footer__list-item {
+          margin-bottom: 15px;
+
+          a {
+            font-size: 15px;
+            text-decoration: none;
+            color: $mainwhite;
+            transition: 0.3s;
+            line-height: 1;
+          }
+
+          a:hover {
+            color: #a2cfe3;
+          }
+        }
+      }
+    }
+
+    .footer__newsletter {
+      .footer__text {
+        color: $mainwhite;
+      }
+    }
+
+    form {
+      position: relative;
+      display: block;
+      background-color: $mainwhite;
+
+      input#email {
+        display: inline-block;
+        border: none;
+      }
+
+      button[type="submit"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 16px;
+        background: #67b0d1;
+        color: $mainwhite;
+        border: none;
+      }
+      button[type="submit"]:hover {
+        background: #409cc5;
+      }
+    }
+  }
+
+  .copyright {
+    border-top: 1px solid #385b6b;
+    text-align: center;
+    padding-top: 30px;
+    color: $mainwhite;
+    text-transform: capitalize;
+  }
+
+  .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+
+    a {
+      text-decoration: none;
+      color: $mainblue
+    }
+  }
+}
